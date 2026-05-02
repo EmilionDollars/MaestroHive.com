@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>About — MaestroHive</title>
+<meta name="description" content="MaestroHive is a Lagos-based full-service creative and communications agency founded in 2023. We orchestrate media, brand, content, web and mobile for companies with taste."/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=JetBrains+Mono:wght@300..700&display=swap" rel="stylesheet">
+<style>
+  :root{--navy:#07102E;--navy2:#0B1A47;--navy3:#122260;--gold:#F5C518;--goldsf:#FFE27A;--cream:#F7F3E9;--paper:#FDFCF7;--line:rgba(10,20,60,.12)}
+  *,*::before,*::after{box-sizing:border-box}html,body{margin:0;padding:0}
+  body{font-family:'Instrument Sans',sans-serif;background:var(--paper);color:var(--navy);overflow-x:hidden;cursor:none;-webkit-font-smoothing:antialiased;font-size:17px;line-height:1.6}
+  @media(max-width:820px){body{cursor:auto}}
+  a{color:inherit;text-decoration:none}img,svg{display:block;max-width:100%}
+  ::selection{background:var(--gold);color:var(--navy)}
+
+/* CURSOR */
+.cur-ring,.cur-dot{position:fixed;top:0;left:0;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:width .25s,height .25s,opacity .3s;will-change:transform}
+.cur-dot{width:6px;height:6px;background:var(--gold);border-radius:50%}
+.cur-ring{width:36px;height:36px;border:1.5px solid rgba(247,243,233,.6);border-radius:50%}
+body.on-link .cur-ring{width:70px;height:70px;background:var(--gold);border-color:var(--gold)}
+body.on-link .cur-dot{opacity:0}
+@media(max-width:820px){.cur-ring,.cur-dot{display:none}}
+
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:22px clamp(20px,4vw,64px);display:flex;justify-content:space-between;align-items:center;background:var(--navy);color:var(--paper)}
+.nav-logo{font-family:'Fraunces',serif;font-weight:500;font-size:22px;letter-spacing:-.02em;display:flex;align-items:center;gap:10px}
+.nav-links{display:flex;gap:36px;font-size:14px}
+.nav-links a{position:relative;padding:8px 0;color:rgba(247,243,233,.8)}
+.nav-links a::after{content:'';position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--gold);transition:width .4s cubic-bezier(.8,0,.2,1)}
+.nav-links a:hover::after{width:100%}
+.nav-links a:hover{color:var(--paper)}
+.nav-cta{padding:10px 20px;border:1px solid rgba(247,243,233,.4);border-radius:100px;font-size:13px;letter-spacing:.05em;color:var(--paper);transition:border-color .3s}
+.nav-cta:hover{border-color:var(--gold);color:var(--gold)}
+@media(max-width:820px){.nav-links{display:none}.nav-cta{padding:8px 14px;font-size:12px}}
+
+/* LAYOUT */
+.container{width:100%;max-width:1440px;margin:0 auto;padding:0 clamp(20px,4vw,64px)}
+.eyebrow{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.25em;text-transform:uppercase;color:var(--navy3);display:inline-flex;align-items:center;gap:10px}
+.eyebrow::before{content:'';width:28px;height:1.5px;background:var(--gold);display:inline-block}
+
+/* HERO */
+.page-hero{min-height:70vh;background:var(--navy);color:var(--paper);display:flex;align-items:flex-end;padding:120px 0 80px;position:relative;overflow:hidden}
+.page-hero-bg{position:absolute;inset:0;background:radial-gradient(circle at 15% 50%,rgba(245,197,24,.15),transparent 45%),radial-gradient(circle at 85% 20%,rgba(26,45,122,.5),transparent 50%)}
+.page-hero-grid{position:absolute;inset:0;background-image:linear-gradient(to right,rgba(247,243,233,.04) 1px,transparent 1px),linear-gradient(to bottom,rgba(247,243,233,.04) 1px,transparent 1px);background-size:80px 80px;mask-image:radial-gradient(ellipse at center,black 30%,transparent 70%)}
+.page-hero-content{position:relative;z-index:2}
+.page-hero-tag{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:32px}
+.page-hero-tag::before{content:'◆ '}
+.page-hero-title{font-family:'Fraunces',serif;font-size:clamp(56px,11vw,180px);line-height:.88;font-weight:300;letter-spacing:-.045em;margin:0}
+.page-hero-title em{font-style:italic;background:linear-gradient(180deg,var(--goldsf),var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent}
+
+/* SECTIONS */
+section{padding:clamp(80px,10vw,140px) 0}
+
+/* WHO WE ARE */
+.who{background:#fff;padding:clamp(80px,10vw,140px) 0}
+.who-grid{display:grid;grid-template-columns:1fr 1.6fr;gap:clamp(40px,8vw,120px);align-items:start}
+@media(max-width:820px){.who-grid{grid-template-columns:1fr}}
+.who-sticky{position:sticky;top:120px}
+.who-title{font-family:'Fraunces',serif;font-weight:300;font-size:clamp(40px,5vw,72px);letter-spacing:-.035em;line-height:1;margin:20px 0 0;color:var(--navy)}
+.who-title em{font-style:italic;color:var(--navy3)}
+.who-body p{font-size:clamp(17px,1.4vw,20px);line-height:1.7;color:#2a3450;margin:0 0 28px}
+.who-body p:last-child{margin:0}
+.who-body strong{font-weight:600;color:var(--navy)}
+
+/* WHAT WE BELIEVE */
+.belief{background:var(--navy);color:var(--paper)}
+.belief-inner{display:grid;grid-template-columns:1fr 2fr;gap:clamp(40px,6vw,100px);align-items:start}
+@media(max-width:820px){.belief-inner{grid-template-columns:1fr}}
+.belief-label{position:sticky;top:120px}
+.belief-label h3{font-family:'Fraunces',serif;font-weight:400;font-size:28px;letter-spacing:-.02em;margin:16px 0 0;color:var(--paper)}
+.belief-quote{font-family:'Fraunces',serif;font-weight:300;font-size:clamp(28px,3.2vw,50px);line-height:1.15;letter-spacing:-.025em;color:var(--paper)}
+.belief-quote em{font-style:italic;color:var(--gold)}
+.belief-pillars{margin-top:60px;display:grid;grid-template-columns:1fr 1fr;gap:32px}
+@media(max-width:600px){.belief-pillars{grid-template-columns:1fr}}
+.pillar{border-top:1px solid rgba(247,243,233,.2);padding-top:24px}
+.pillar-num{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.2em;color:var(--gold)}
+.pillar-title{font-family:'Fraunces',serif;font-weight:400;font-size:22px;letter-spacing:-.02em;margin:8px 0 10px;color:var(--paper)}
+.pillar-title em{font-style:italic;color:var(--gold)}
+.pillar-desc{font-size:15px;line-height:1.55;color:rgba(247,243,233,.65)}
+
+/* WHAT WE DO */
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--line);border:1px solid var(--line)}
+@media(max-width:820px){.services-grid{grid-template-columns:1fr}}
+.service-item{background:var(--paper);padding:40px 36px;transition:background .3s}
+.service-item:hover{background:var(--cream)}
+.service-icon{width:44px;height:44px;background:var(--navy);border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:24px}
+.service-icon svg{color:var(--gold)}
+.service-name{font-family:'Fraunces',serif;font-weight:400;font-size:22px;letter-spacing:-.02em;margin:0 0 12px}
+.service-desc{font-size:15px;line-height:1.55;color:rgba(7,16,46,.65)}
+
+/* MILESTONES */
+.milestones{background:var(--cream)}
+.milestones-header{margin-bottom:60px}
+.milestones-title{font-family:'Fraunces',serif;font-weight:300;font-size:clamp(40px,5vw,72px);letter-spacing:-.035em;line-height:1;margin:20px 0 0}
+.milestones-title em{font-style:italic;color:var(--navy3)}
+.timeline{border-top:1px solid var(--line)}
+.tl-row{display:grid;grid-template-columns:120px 1fr;gap:40px;padding:32px 0;border-bottom:1px solid var(--line);align-items:start}
+@media(max-width:600px){.tl-row{grid-template-columns:80px 1fr;gap:20px}}
+.tl-year{font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.15em;color:var(--gold);padding-top:4px}
+.tl-content h4{font-family:'Fraunces',serif;font-weight:400;font-size:22px;letter-spacing:-.02em;margin:0 0 8px}
+.tl-content p{font-size:15px;line-height:1.55;color:rgba(7,16,46,.7);margin:0}
+
+/* CONTACT STRIP */
+.contact-strip{background:var(--navy);color:var(--paper);padding:clamp(80px,10vw,130px) 0}
+.contact-strip-inner{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,100px);align-items:center}
+@media(max-width:820px){.contact-strip-inner{grid-template-columns:1fr;gap:40px}}
+.contact-title{font-family:'Fraunces',serif;font-weight:300;font-size:clamp(40px,6vw,90px);letter-spacing:-.04em;line-height:.9;margin:0}
+.contact-title em{font-style:italic;color:var(--gold)}
+.contact-details{display:flex;flex-direction:column;gap:20px}
+.contact-item{display:flex;flex-direction:column;gap:4px}
+.contact-item-label{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:rgba(247,243,233,.45)}
+.contact-item-val{font-size:17px;color:var(--paper)}
+.contact-item-val a{color:var(--paper);transition:color .3s}
+.contact-item-val a:hover{color:var(--gold)}
+.contact-btn{margin-top:12px;display:inline-flex;align-items:center;gap:20px;padding:18px 14px 18px 36px;background:var(--gold);color:var(--navy);border-radius:100px;font-family:'Fraunces',serif;font-size:20px;font-weight:500;transition:transform .4s cubic-bezier(.2,.9,.2,1)}
+.contact-btn:hover{transform:translateY(-3px)}
+.contact-btn .circle{width:46px;height:46px;border-radius:50%;background:var(--navy);color:var(--gold);display:flex;align-items:center;justify-content:center;transition:transform .5s}
+.contact-btn:hover .circle{transform:rotate(-45deg)}
+
+/* FOOTER */
+.footer{background:var(--navy);color:var(--paper);padding:40px 0;border-top:1px solid rgba(247,243,233,.1)}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.15em;color:rgba(247,243,233,.4);text-transform:uppercase;flex-wrap:wrap;gap:12px}
+.footer-bottom a{color:rgba(247,243,233,.4);transition:color .3s}
+.footer-bottom a:hover{color:var(--gold)}
+
+/* REVEAL */
+.rv{opacity:0;transform:translateY(30px);transition:opacity .9s cubic-bezier(.2,.9,.2,1),transform .9s cubic-bezier(.2,.9,.2,1)}
+.rv.in{opacity:1;transform:translateY(0)}
+.rv.d1{transition-delay:.1s}.rv.d2{transition-delay:.2s}.rv.d3{transition-delay:.3s}
+</style>
+</head>
+<body>
+<div class="cur-ring"></div>
+<div class="cur-dot"></div>
+
+<!-- NAV -->
+<nav class="nav">
+  <a href="index.html" class="nav-logo">
+    <svg width="34" height="34" viewBox="60 110 330 220" xmlns="http://www.w3.org/2000/svg">
+      <g fill="currentColor">
+        <path d="M211.6 213.6H165l-23.3 40.3 23.3 40.3h46.6l23.2-40.3zM136.1 170.3H89.5l-23.3 40.3 23.3 40.3h46.6l23.2-40.3zM211.6 127H165l-23.3 40.3 23.3 40.3h46.6l23.2-40.3zM362.5 213.6H316l-23.3 40.3 23.3 40.3h46.5l23.3-40.3zM287 170.3h-46.5l-23.3 40.3 23.3 40.3H287l23.3-40.3zM362.5 127H316l-23.3 40.3 23.3 40.3h46.5l23.3-40.3zM287 256.9h-46.5l-23.3 40.3 23.3 40.3H287l23.3-40.3z"/>
+      </g>
+    </svg>
+    MaestroHive
+  </a>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="index.html#services">Services</a>
+    <a href="index.html#work">Work</a>
+    <a href="index.html#process">Process</a>
+  </div>
+  <a href="mailto:hello@maestrohive.com" class="nav-cta">Start a project →</a>
+</nav>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-grid"></div>
+  <div class="container page-hero-content">
+    <div class="page-hero-tag">About the hive</div>
+    <h1 class="page-hero-title">We are<br><em>MaestroHive.</em></h1>
+  </div>
+</div>
+
+<!-- WHO WE ARE -->
+<section class="who">
+  <div class="container">
+    <div class="who-grid">
+      <div class="who-sticky rv">
+        <div class="eyebrow">(01) Who we are</div>
+        <h2 class="who-title">Built for<br><em>brilliance.</em></h2>
+      </div>
+      <div class="who-body rv d1">
+        <p>MaestroHive is a <strong>full-service creative technology agency</strong> founded in Lagos in 2023. We bring together media planning, communications, brand strategy, content creation, web and mobile development under one roof — one hive, one rhythm.</p>
+        <p>We don't believe in siloed agencies or half-measures. The world's most compelling brands are built by teams that can think in strategy and execute in craft simultaneously. That's why we built MaestroHive differently.</p>
+        <p>Our name says it all. A <strong>maestro</strong> orchestrates. A <strong>hive</strong> collaborates. We do both — bringing discipline, creativity and technology to bear in perfect concert for every client we partner with.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT WE BELIEVE -->
+<section class="belief">
+  <div class="container">
+    <div class="belief-inner">
+      <div class="belief-label rv">
+        <div class="eyebrow" style="color:rgba(247,243,233,.6)">(02) What we believe</div>
+        <h3>Our philosophy.</h3>
+      </div>
+      <div class="rv d1">
+        <div class="belief-quote">
+          A brand is a <em>living organism.</em> It grows, evolves, speaks, listens — and when treated right, it hums with a frequency that no competitor can replicate.
+        </div>
+        <div class="belief-pillars">
+          <div class="pillar rv">
+            <div class="pillar-num">◆ 01</div>
+            <h4 class="pillar-title"><em>Strategy first,</em> always.</h4>
+            <p class="pillar-desc">Great creative is meaningless without the right strategic foundation. We start by understanding your market, your audience and your ambition.</p>
+          </div>
+          <div class="pillar rv d1">
+            <div class="pillar-num">◆ 02</div>
+            <h4 class="pillar-title"><em>Craft</em> is non-negotiable.</h4>
+            <p class="pillar-desc">We obsess over details. Every pixel, every word, every frame is considered. Quality is not a service tier — it is the only standard we operate at.</p>
+          </div>
+          <div class="pillar rv d2">
+            <div class="pillar-num">◆ 03</div>
+            <h4 class="pillar-title"><em>Integration</em> creates impact.</h4>
+            <p class="pillar-desc">When media, brand, content and tech are designed to work together, the result is exponentially more powerful than any one discipline alone.</p>
+          </div>
+          <div class="pillar rv d3">
+            <div class="pillar-num">◆ 04</div>
+            <h4 class="pillar-title"><em>Partnerships,</em> not projects.</h4>
+            <p class="pillar-desc">The best work happens in long relationships built on trust. We invest in understanding your business as deeply as you do.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT WE DO -->
+<section style="background:var(--paper);padding:clamp(80px,10vw,140px) 0">
+  <div class="container">
+    <div class="rv" style="margin-bottom:60px">
+      <div class="eyebrow">(03) What we do</div>
+      <h2 style="font-family:'Fraunces',serif;font-weight:300;font-size:clamp(40px,5vw,72px);letter-spacing:-.035em;line-height:1;margin:20px 0 0">Six disciplines,<br><em style="font-style:italic;color:var(--navy3)">one team.</em></h2>
+    </div>
+    <div class="services-grid">
+      <div class="service-item rv">
+        <div class="service-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12h20M2 6h20M2 18h14"/></svg></div>
+        <h3 class="service-name">Media Planning &amp; Buying</h3>
+        <p class="service-desc">Audience-first media strategy across broadcast, digital, outdoor and experiential. We buy smart and optimise relentlessly.</p>
+      </div>
+      <div class="service-item rv d1">
+        <div class="service-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div>
+        <h3 class="service-name">Communications &amp; PR</h3>
+        <p class="service-desc">Narrative strategy, media relations, stakeholder engagement and crisis comms. The stories your brand needs the world to hear.</p>
+      </div>
+      <div class="service-item rv d2">
+        <div class="service-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/></svg></div>
+        <h3 class="service-name">Brand Management</h3>
+        <p class="service-desc">Brand strategy, identity systems, verbal identity and governance. Living brands that are clear, connected and built to last.</p>
+      </div>
+      <div class="service-item rv">
+        <div class="service-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14.5 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V7.5L14.5 2z"/><polyline points="14,2 14,8 20,8"/></svg></div>
+        <h3 class="service-name">Content &amp; Creative</h3>
+        <p class="service-desc">Editorial, film, motion, photography and social content. Stories shaped by strategy, shot with taste.</p>
+      </div>
+      <div class="service-item rv d1">
+        <div class="service-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+        <h3 class="service-name">Web Design &amp; Development</h3>
+        <p class="service-desc">Marketing sites, editorial platforms and e-commerce. Hand-crafted design, meticulous engineering, zero compromise.</p>
+      </div>
+      <div class="service-item rv d2">
+        <div class="service-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg></div>
+        <h3 class="service-name">Mobile App Development</h3>
+        <p class="service-desc">iOS, Android and cross-platform apps. Product thinking, design systems, native performance. Apps users love opening.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MILESTONES -->
+<section class="milestones">
+  <div class="container">
+    <div class="milestones-header rv">
+      <div class="eyebrow">(04) Our journey</div>
+      <h2 class="milestones-title">How the hive<br><em>came to be.</em></h2>
+    </div>
+    <div class="timeline">
+      <div class="tl-row rv">
+        <div class="tl-year">2023</div>
+        <div class="tl-content">
+          <h4>Founded in Lagos</h4>
+          <p>MaestroHive was established with a clear mission: to give growing African and global brands access to world-class creative and communications expertise under one roof.</p>
+        </div>
+      </div>
+      <div class="tl-row rv d1">
+        <div class="tl-year">2023</div>
+        <div class="tl-content">
+          <h4>First clients onboarded</h4>
+          <p>We partnered with BrandsandIdeas, ITG Africa and MyLenZ.app — delivering media, brand sound, voiceover production and digital presence work that set the tone for everything we build.</p>
+        </div>
+      </div>
+      <div class="tl-row rv d2">
+        <div class="tl-year">2024</div>
+        <div class="tl-content">
+          <h4>Expanding the swarm</h4>
+          <p>Growing our capabilities across web development, mobile and creative production — and deepening partnerships with clients across Nigeria and beyond.</p>
+        </div>
+      </div>
+      <div class="tl-row rv d3">
+        <div class="tl-year">2025</div>
+        <div class="tl-content">
+          <h4>The hive is humming</h4>
+          <p>Today we are a full-service creative technology hive, serving forward-looking companies who refuse to be invisible. The best chapter is the one we're writing now.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT STRIP -->
+<section class="contact-strip">
+  <div class="container">
+    <div class="contact-strip-inner">
+      <h2 class="contact-title rv">Ready to<br>build<br><em>together?</em></h2>
+      <div class="rv d1">
+        <div class="contact-details">
+          <div class="contact-item">
+            <span class="contact-item-label">Email</span>
+            <span class="contact-item-val"><a href="mailto:hello@maestrohive.com">hello@maestrohive.com</a></span>
+          </div>
+          <div class="contact-item">
+            <span class="contact-item-label">Phone</span>
+            <span class="contact-item-val"><a href="tel:+2349023204848">+234 902 320 4848</a></span>
+          </div>
+          <div class="contact-item">
+            <span class="contact-item-label">Location</span>
+            <span class="contact-item-val">6 Alhaji Ekemode St, Happyland Estate,<br>Sangotedo, Lagos, Nigeria</span>
+          </div>
+        </div>
+        <a href="mailto:hello@maestrohive.com" class="contact-btn" style="margin-top:32px">
+          Start a project
+          <span class="circle"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-bottom">
+      <div>© 2023 MaestroHive. All rights reserved.</div>
+      <div style="display:flex;gap:24px;flex-wrap:wrap">
+        <a href="index.html">Home</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="mailto:hello@maestrohive.com">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* CURSOR */
+const ring=document.querySelector('.cur-ring'),dot=document.querySelector('.cur-dot');
+let mx=innerWidth/2,my=innerHeight/2,rx=mx,ry=my;
+window.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;dot.style.transform=`translate(${mx}px,${my}px) translate(-50%,-50%)`;});
+(function loop(){rx+=(mx-rx)*.15;ry+=(my-ry)*.15;ring.style.transform=`translate(${rx}px,${ry}px) translate(-50%,-50%)`;requestAnimationFrame(loop);})();
+document.querySelectorAll('a,button,.service-item').forEach(el=>{
+  el.addEventListener('mouseenter',()=>document.body.classList.add('on-link'));
+  el.addEventListener('mouseleave',()=>document.body.classList.remove('on-link'));
+});
+
+/* REVEAL */
+const rvEls=document.querySelectorAll('.rv');
+const robs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');robs.unobserve(e.target)}});
+},{threshold:0.05,rootMargin:'0px 0px -10px 0px'});
+rvEls.forEach(el=>robs.observe(el));
+setTimeout(()=>document.querySelectorAll('.rv:not(.in)').forEach(el=>el.classList.add('in')),2500);
+</script>
+
+</body>
+</html>

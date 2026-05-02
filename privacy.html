@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Privacy Policy — MaestroHive</title>
+<meta name="description" content="MaestroHive Privacy Policy — how we collect, use and protect your information."/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=JetBrains+Mono:wght@300..700&display=swap" rel="stylesheet">
+<style>
+  :root{--navy:#07102E;--navy2:#0B1A47;--navy3:#122260;--gold:#F5C518;--goldsf:#FFE27A;--cream:#F7F3E9;--paper:#FDFCF7;--line:rgba(10,20,60,.12)}
+  *,*::before,*::after{box-sizing:border-box}html,body{margin:0;padding:0}
+  body{font-family:'Instrument Sans',sans-serif;background:#ffffff;color:#07102E;overflow-x:hidden;-webkit-font-smoothing:antialiased;font-size:17px;line-height:1.7}
+  a{color:var(--navy3);text-decoration:none;border-bottom:1px solid var(--gold)}
+  a:hover{color:var(--gold)}
+  img,svg{display:block;max-width:100%}
+  ::selection{background:var(--gold);color:var(--navy)}
+
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:22px clamp(20px,4vw,64px);display:flex;justify-content:space-between;align-items:center;background:var(--navy);color:var(--paper)}
+.nav-logo{font-family:'Fraunces',serif;font-weight:500;font-size:22px;letter-spacing:-.02em;display:flex;align-items:center;gap:10px;text-decoration:none;border:none;color:var(--paper)}
+.nav-back{padding:10px 20px;border:1px solid rgba(247,243,233,.4)!important;border-radius:100px;font-size:13px;letter-spacing:.05em;color:var(--paper)!important;text-decoration:none;transition:border-color .3s,color .3s}
+.nav-back:hover{border-color:var(--gold)!important;color:var(--gold)!important}
+
+/* LAYOUT */
+.container{width:100%;max-width:1440px;margin:0 auto;padding:0 clamp(20px,4vw,64px)}
+.eyebrow{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.25em;text-transform:uppercase;color:var(--navy3);display:inline-flex;align-items:center;gap:10px;border:none}
+.eyebrow::before{content:'';width:28px;height:1.5px;background:var(--gold);display:inline-block}
+
+/* HERO */
+.page-hero{background:var(--navy);color:var(--paper);padding:160px 0 80px;position:relative;overflow:hidden}
+.page-hero-bg{position:absolute;inset:0;background:radial-gradient(circle at 80% 30%,rgba(245,197,24,.12),transparent 45%)}
+.page-hero-content{position:relative;z-index:2}
+.page-hero-tag{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:32px}
+.page-hero-tag::before{content:'◆ '}
+.page-hero-title{font-family:'Fraunces',serif;font-size:clamp(48px,8vw,130px);line-height:.92;font-weight:300;letter-spacing:-.04em;margin:0 0 24px}
+.page-hero-title em{font-style:italic;color:var(--gold)}
+.page-hero-sub{font-size:16px;color:rgba(247,243,233,.6);font-family:'JetBrains Mono',monospace;letter-spacing:.05em}
+
+/* CONTENT */
+.policy-body{padding:clamp(60px,8vw,120px) 0;background:#ffffff}
+.policy-toc{background:#F7F3E9;border-radius:8px;padding:28px 32px;margin-bottom:60px}
+.policy-toc-title{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#122260;margin:0 0 16px}
+.policy-toc ul{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(3,1fr);gap:4px 24px}
+@media(max-width:700px){.policy-toc ul{grid-template-columns:1fr 1fr}}
+@media(max-width:440px){.policy-toc ul{grid-template-columns:1fr}}
+.policy-toc li a{display:block;padding:6px 0;font-size:14px;color:#444f6e;border:none;border-bottom:1px solid transparent;transition:color .3s,border-color .3s}
+.policy-toc li a:hover{color:#07102E;border-bottom-color:var(--gold)}
+.policy-content{color:#07102E;max-width:860px}
+.policy-content h2{font-family:'Fraunces',serif;font-weight:400;font-size:clamp(26px,3vw,38px);letter-spacing:-.025em;line-height:1.1;margin:60px 0 20px;padding-top:20px;border-top:1px solid rgba(10,20,60,.12);color:#07102E}
+.policy-content h2:first-child{margin-top:0;border-top:none}
+.policy-content h2 em{font-style:italic;color:#122260}
+.policy-content p{color:#2a3450;margin:0 0 20px;font-size:16px;line-height:1.75}
+.policy-content ul{color:#2a3450;margin:0 0 20px;padding-left:24px;font-size:16px;line-height:1.75}
+.policy-content ul li{margin-bottom:8px}
+.policy-content strong{color:#07102E;font-weight:600}
+.policy-content .highlight-box{background:#F7F3E9;border-left:3px solid var(--gold);padding:20px 24px;margin:24px 0;border-radius:0 6px 6px 0}
+.policy-content .highlight-box p{margin:0;font-size:15px;color:#07102E}
+
+/* FOOTER */
+.footer{background:var(--navy);color:var(--paper);padding:40px 0}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.15em;color:rgba(247,243,233,.5);text-transform:uppercase;flex-wrap:wrap;gap:12px}
+.footer-bottom a{color:rgba(247,243,233,.5);border:none;transition:color .3s}
+.footer-bottom a:hover{color:var(--gold)}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <a href="index.html" class="nav-logo">
+    <svg width="34" height="34" viewBox="60 110 330 220" xmlns="http://www.w3.org/2000/svg">
+      <g fill="currentColor">
+        <path d="M211.6 213.6H165l-23.3 40.3 23.3 40.3h46.6l23.2-40.3zM136.1 170.3H89.5l-23.3 40.3 23.3 40.3h46.6l23.2-40.3zM211.6 127H165l-23.3 40.3 23.3 40.3h46.6l23.2-40.3zM362.5 213.6H316l-23.3 40.3 23.3 40.3h46.5l23.3-40.3zM287 170.3h-46.5l-23.3 40.3 23.3 40.3H287l23.3-40.3zM362.5 127H316l-23.3 40.3 23.3 40.3h46.5l23.3-40.3zM287 256.9h-46.5l-23.3 40.3 23.3 40.3H287l23.3-40.3z"/>
+      </g>
+    </svg>
+    MaestroHive
+  </a>
+  <a href="index.html" class="nav-back">← Back to site</a>
+</nav>
+
+<!-- HERO -->
+<div class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="container page-hero-content">
+    <div class="page-hero-tag">Legal</div>
+    <h1 class="page-hero-title">Privacy <em>Policy</em></h1>
+    <p class="page-hero-sub">Last updated: January 2025 &nbsp;·&nbsp; Effective: January 2025</p>
+  </div>
+</div>
+
+<!-- POLICY BODY -->
+<div class="policy-body">
+  <div class="container">
+
+    <div class="policy-toc">
+      <p class="policy-toc-title">Contents</p>
+      <ul>
+        <li><a href="#intro">1. Introduction</a></li>
+        <li><a href="#collect">2. Information We Collect</a></li>
+        <li><a href="#use">3. How We Use It</a></li>
+        <li><a href="#share">4. Sharing Your Data</a></li>
+        <li><a href="#cookies">5. Cookies</a></li>
+        <li><a href="#rights">6. Your Rights</a></li>
+        <li><a href="#security">7. Data Security</a></li>
+        <li><a href="#retention">8. Data Retention</a></li>
+        <li><a href="#children">9. Children</a></li>
+        <li><a href="#changes">10. Policy Changes</a></li>
+        <li><a href="#contact">11. Contact Us</a></li>
+      </ul>
+    </div>
+
+    <div class="policy-content">
+
+      <div class="highlight-box">
+        <p><strong>Plain-language summary:</strong> MaestroHive collects only the information you choose to give us. We do not sell your data. We use it solely to communicate with you, deliver our services and improve your experience. You may request deletion at any time.</p>
+      </div>
+
+      <h2 id="intro">1. <em>Introduction</em></h2>
+      <p>MaestroHive ("we", "us" or "our") is a full-service creative and communications agency registered and operating in Lagos, Nigeria. We are committed to protecting the privacy of everyone who interacts with our website at <strong>maestrohive.com</strong> and our services.</p>
+      <p>This Privacy Policy explains what personal information we collect, why we collect it, how we use it and what rights you have over it. By using our website or engaging our services, you agree to the practices described here.</p>
+
+      <h2 id="collect">2. <em>Information We Collect</em></h2>
+      <p>We collect information in two ways — what you give us directly and what is collected automatically.</p>
+      <p><strong>Information you provide to us:</strong></p>
+      <ul>
+        <li>Name and contact details (email address, phone number) when you reach out via our contact email or phone</li>
+        <li>Business information when you engage us for a project (company name, project brief, billing details)</li>
+        <li>Communications you send us via email or social media</li>
+      </ul>
+      <p><strong>Information collected automatically:</strong></p>
+      <ul>
+        <li>Standard web server logs including your IP address, browser type, referring URL and pages visited</li>
+        <li>Device and usage data collected through analytics tools to help us understand how our site is used</li>
+        <li>Cookies and similar tracking technologies (see Section 5)</li>
+      </ul>
+
+      <h2 id="use">3. <em>How We Use Your Information</em></h2>
+      <p>We use the information we collect for the following purposes:</p>
+      <ul>
+        <li><strong>To communicate with you</strong> — responding to enquiries, proposals and project updates</li>
+        <li><strong>To deliver our services</strong> — managing projects, producing deliverables and billing</li>
+        <li><strong>To improve our website</strong> — analysing usage patterns to make our site more useful</li>
+        <li><strong>To send relevant information</strong> — where you have consented, sharing updates, case studies or news about MaestroHive</li>
+        <li><strong>To comply with legal obligations</strong> — meeting our responsibilities under applicable Nigerian law</li>
+      </ul>
+      <p>We will never use your information for purposes beyond those stated above without obtaining your explicit consent first.</p>
+
+      <h2 id="share">4. <em>Sharing Your Data</em></h2>
+      <p>We do not sell, rent or trade your personal information to any third party. We may share data only in these limited circumstances:</p>
+      <ul>
+        <li><strong>Service providers</strong> — trusted tools and platforms we use to operate our business (e.g. email hosting, project management, cloud storage). These providers are contractually bound to protect your data and may only use it for the specific purpose we engage them for.</li>
+        <li><strong>Legal requirements</strong> — if required by law, court order or government authority in Nigeria or another jurisdiction with applicable power.</li>
+        <li><strong>Business transfers</strong> — in the unlikely event of a merger or acquisition, your data may be transferred as part of that transaction, and you will be notified.</li>
+      </ul>
+
+      <h2 id="cookies">5. <em>Cookies</em></h2>
+      <p>Our website uses cookies — small text files stored on your device — to make the site function correctly and to understand how visitors use it.</p>
+      <p>We use:</p>
+      <ul>
+        <li><strong>Essential cookies</strong> — required for the site to function. These cannot be disabled.</li>
+        <li><strong>Analytics cookies</strong> — help us understand traffic and usage patterns (e.g. Google Analytics). These collect anonymous, aggregated data.</li>
+      </ul>
+      <p>You can control cookie preferences through your browser settings. Disabling analytics cookies will not affect your ability to use the site.</p>
+
+      <h2 id="rights">6. <em>Your Rights</em></h2>
+      <p>You have the following rights regarding your personal information. To exercise any of them, contact us at <a href="mailto:hello@maestrohive.com">hello@maestrohive.com</a>.</p>
+      <ul>
+        <li><strong>Access</strong> — request a copy of the personal information we hold about you</li>
+        <li><strong>Correction</strong> — ask us to correct inaccurate or incomplete information</li>
+        <li><strong>Deletion</strong> — request that we delete your personal data where we have no legitimate reason to retain it</li>
+        <li><strong>Objection</strong> — object to how we process your data in certain circumstances</li>
+        <li><strong>Withdraw consent</strong> — where processing is based on your consent, withdraw it at any time without affecting prior processing</li>
+      </ul>
+      <p>We will respond to all valid requests within 30 days. In complex cases we may take up to 90 days, and will inform you if this is the case.</p>
+
+      <h2 id="security">7. <em>Data Security</em></h2>
+      <p>We take reasonable technical and organisational measures to protect your personal information against unauthorised access, alteration, disclosure or destruction. These include encrypted communications, restricted access controls and regular security reviews.</p>
+      <p>However, no method of transmission over the internet or electronic storage is 100% secure. While we strive to protect your data, we cannot guarantee absolute security.</p>
+
+      <h2 id="retention">8. <em>Data Retention</em></h2>
+      <p>We retain personal information only for as long as necessary to fulfil the purposes for which it was collected, or as required by law. Client project data is typically retained for 3 years following project completion. Enquiry data from non-clients is deleted after 12 months if no engagement occurs. You may request deletion at any time.</p>
+
+      <h2 id="children">9. <em>Children</em></h2>
+      <p>Our website and services are not directed at children under the age of 16. We do not knowingly collect personal information from children. If you believe a child has provided us with their information, please contact us immediately and we will delete it promptly.</p>
+
+      <h2 id="changes">10. <em>Changes to This Policy</em></h2>
+      <p>We may update this Privacy Policy from time to time to reflect changes in our practices or applicable law. When we do, we will update the "Last updated" date at the top of this page. We encourage you to review this page periodically. Continued use of our website after any changes constitutes your acceptance of the updated policy.</p>
+
+      <h2 id="contact">11. <em>Contact Us</em></h2>
+      <p>If you have any questions, concerns or requests relating to this Privacy Policy or your personal data, please contact us:</p>
+      <ul>
+        <li><strong>Email:</strong> <a href="mailto:hello@maestrohive.com">hello@maestrohive.com</a></li>
+        <li><strong>Phone:</strong> <a href="tel:+2349023204848">+234 902 320 4848</a></li>
+        <li><strong>Post:</strong> MaestroHive, 6 Alhaji Ekemode Street, Happyland Estate, Sangotedo, Lagos, Nigeria</li>
+      </ul>
+      <p>We take all privacy concerns seriously and will respond within 5 business days.</p>
+
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-bottom">
+      <div>© 2023 MaestroHive. All rights reserved.</div>
+      <div style="display:flex;gap:24px;flex-wrap:wrap">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="mailto:hello@maestrohive.com">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
