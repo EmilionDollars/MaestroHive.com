@@ -49,8 +49,9 @@ section{padding:clamp(80px,10vw,140px) 0}
 /* WHO WE ARE */
 .who{background:#fff;padding:clamp(80px,10vw,140px) 0}
 .who-grid{display:grid;grid-template-columns:1fr 1.6fr;gap:clamp(40px,8vw,120px);align-items:start}
-@media(max-width:820px){.who-grid{grid-template-columns:1fr}.who-sticky{position:static}}
+@media(max-width:820px){.who-grid{grid-template-columns:1fr}}
 .who-sticky{position:sticky;top:120px}
+@media(max-width:820px){.who-sticky{position:static}}
 .who-title{font-family:'Fraunces',serif;font-weight:300;font-size:clamp(40px,5vw,72px);letter-spacing:-.035em;line-height:1;margin:20px 0 0;color:var(--navy)}
 .who-title em{font-style:italic;color:var(--navy3)}
 .who-body p{font-size:clamp(17px,1.4vw,20px);line-height:1.7;color:#2a3450;margin:0 0 28px}
@@ -60,8 +61,9 @@ section{padding:clamp(80px,10vw,140px) 0}
 /* WHAT WE BELIEVE */
 .belief{background:var(--navy);color:var(--paper)}
 .belief-inner{display:grid;grid-template-columns:1fr 2fr;gap:clamp(40px,6vw,100px);align-items:start}
-@media(max-width:820px){.belief-inner{grid-template-columns:1fr}.belief-label{position:static}}
+@media(max-width:820px){.belief-inner{grid-template-columns:1fr}}
 .belief-label{position:sticky;top:120px}
+@media(max-width:820px){.belief-label{position:static}}
 .belief-label h3{font-family:'Fraunces',serif;font-weight:400;font-size:28px;letter-spacing:-.02em;margin:16px 0 0;color:var(--paper)}
 .belief-quote{font-family:'Fraunces',serif;font-weight:300;font-size:clamp(28px,3.2vw,50px);line-height:1.15;letter-spacing:-.025em;color:var(--paper)}
 .belief-quote em{font-style:italic;color:var(--gold)}
