@@ -266,6 +266,62 @@
 .success-title{font-family:'Fraunces',serif;font-weight:300;font-size:clamp(28px,3vw,40px);letter-spacing:-.03em;margin:0 0 12px;color:var(--navy-900)}
 .success-title em{font-style:italic;color:var(--navy-700)}
 .success-sub{font-size:15px;color:rgba(7,16,46,.6);line-height:1.65;max-width:340px}
+
+/* MYLENZ PHONE MOCKUPS */
+.c-mylenz .case-visual{overflow:hidden}
+.phone{width:130px;height:244px;background:#111;border-radius:20px;border:2.5px solid rgba(255,255,255,.1);overflow:hidden;position:absolute;box-shadow:0 24px 64px rgba(0,0,0,.95)}
+.phone-back{transform:rotate(-8deg) translate(-54px,18px);z-index:1}
+.phone-front{transform:rotate(4deg) translate(54px,-14px);z-index:2}
+.ph-nav{display:flex;justify-content:space-between;align-items:center;padding:7px 9px;background:#000;border-bottom:1px solid rgba(255,255,255,.06)}
+.ph-logo{font-weight:800;font-size:10px;color:#fff;font-family:-apple-system,BlinkMacSystemFont,sans-serif}
+.ph-logo .gz{color:#F5C518}
+.ph-joinbtn{background:#F5C518;color:#000;border:none;border-radius:100px;font-size:7px;font-weight:700;padding:3px 7px;font-family:-apple-system,sans-serif;white-space:nowrap}
+.ph-card{margin:6px;background:#1a1a1a;border-radius:10px;padding:8px}
+.ph-card-hdr{display:flex;justify-content:space-between;font-size:6px;color:rgba(255,255,255,.4);margin-bottom:6px;text-transform:uppercase;letter-spacing:.08em;font-family:-apple-system,sans-serif}
+.ph-live{color:#4ade80;display:flex;align-items:center;gap:3px}
+.ph-live::before{content:'';width:4px;height:4px;border-radius:50%;background:#4ade80;flex-shrink:0;display:inline-block}
+.ph-card-title{font-weight:700;font-size:12px;color:#fff;margin:0 0 2px;font-family:-apple-system,sans-serif}
+.ph-card-sub{font-size:7px;color:rgba(255,255,255,.4);margin-bottom:8px;line-height:1.4;font-family:-apple-system,sans-serif}
+.ph-countdown{display:flex;gap:3px}
+.ph-unit{background:#252525;border-radius:5px;flex:1;padding:5px 0;text-align:center}
+.ph-uval{font-weight:700;font-size:13px;color:#fff;display:block;font-family:-apple-system,sans-serif}
+.ph-ulbl{font-size:5px;color:rgba(255,255,255,.35);text-transform:uppercase;letter-spacing:.04em;display:block;font-family:-apple-system,sans-serif}
+.ph-footer{display:flex;justify-content:space-between;align-items:center;margin-top:8px;font-size:7px;color:rgba(255,255,255,.5);font-family:-apple-system,sans-serif}
+.ph-footer b{color:#F5C518}
+.ph-avs{display:flex}
+.ph-av{width:11px;height:11px;border-radius:50%;border:1.5px solid #1a1a1a;margin-left:-4px}
+.ph-hero{padding:8px 9px}
+.ph-htag{font-size:5.5px;color:#F5C518;text-transform:uppercase;letter-spacing:.1em;margin-bottom:5px;font-family:-apple-system,sans-serif}
+.ph-htitle{font-weight:800;font-size:12px;color:#fff;line-height:1.2;margin:0 0 5px;font-family:-apple-system,sans-serif}
+.ph-htitle em{font-style:italic;color:#F5C518}
+.ph-hdesc{font-size:7px;color:rgba(255,255,255,.5);line-height:1.5;margin:0 0 8px;font-family:-apple-system,sans-serif}
+.ph-hcta{display:block;background:#F5C518;color:#000;border-radius:100px;font-size:8px;font-weight:700;padding:5px 0;text-align:center;margin-bottom:4px;font-family:-apple-system,sans-serif}
+.ph-hcta2{display:block;border:1px solid rgba(255,255,255,.25);border-radius:100px;font-size:7px;padding:4px 0;text-align:center;color:rgba(255,255,255,.75);font-family:-apple-system,sans-serif}
+.ph-hstats{display:flex;margin-top:10px;padding-top:8px;border-top:1px solid rgba(255,255,255,.08)}
+.ph-hstat{flex:1;text-align:center}
+.ph-hsnum{font-weight:700;font-size:14px;color:#F5C518;display:block;font-family:-apple-system,sans-serif}
+.ph-hslbl{font-size:6px;color:rgba(255,255,255,.4);display:block;line-height:1.35;font-family:-apple-system,sans-serif}
+
+/* ITG YOUTUBE VIDEO CARD */
+.case-video{background:#000;border-radius:6px;overflow:hidden;grid-column:span 12;cursor:default;transition:transform .6s cubic-bezier(.2,.9,.2,1)}
+.case-video:hover{transform:translateY(-4px)}
+.yt-area{position:relative;aspect-ratio:16/7;background:#000;overflow:hidden}
+@media(max-width:820px){.yt-area{aspect-ratio:16/9}}
+.yt-facade{position:absolute;inset:0;cursor:pointer;display:flex;align-items:center;justify-content:center}
+.yt-thumb{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.2,.9,.2,1),opacity .4s}
+.yt-facade:hover .yt-thumb{transform:scale(1.03);opacity:.75}
+.yt-play{position:relative;z-index:2;width:76px;height:76px;border-radius:50%;background:var(--gold);color:var(--navy-900);display:flex;align-items:center;justify-content:center;transition:transform .35s cubic-bezier(.2,.9,.2,1),box-shadow .35s;box-shadow:0 8px 40px rgba(245,197,24,.5)}
+.yt-facade:hover .yt-play{transform:scale(1.12);box-shadow:0 16px 64px rgba(245,197,24,.65)}
+.yt-badge{position:absolute;bottom:24px;left:24px;z-index:2;display:flex;align-items:center;gap:8px;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.12em;color:rgba(247,243,233,.9);background:rgba(7,16,46,.72);border:1px solid rgba(247,243,233,.15);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-radius:100px;padding:8px 16px 8px 12px}
+.yt-frame-wrap{position:absolute;inset:0;display:none}
+.yt-frame-wrap iframe{width:100%;height:100%;border:none;display:block}
+.video-meta{padding:22px 28px;display:flex;justify-content:space-between;align-items:center;background:var(--navy-900);border-top:1px solid rgba(247,243,233,.08)}
+@media(max-width:820px){.video-meta{padding:16px 20px;flex-wrap:wrap;gap:12px}}
+.video-label{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
+.video-name{font-family:'Fraunces',serif;font-weight:400;font-size:clamp(22px,2.6vw,36px);letter-spacing:-.02em;line-height:1;margin:0;color:var(--paper)}
+.video-tag{font-size:13px;color:rgba(247,243,233,.55);margin-top:4px}
+.video-arrow{width:50px;height:50px;background:var(--gold);color:var(--navy-900);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:transform .4s cubic-bezier(.2,.9,.2,1)}
+.video-arrow:hover{transform:rotate(-45deg) scale(1.05)}
 </style>
 </head>
 <body style="overflow:hidden;height:100vh">
@@ -431,15 +487,56 @@
         </div>
       </a>
 
-      <!-- MyLenZ — narrow right -->
-      <a class="case case-narrow c-mylenz rv d1" href="https://www.mylenz.app" target="_blank" rel="noopener">
+      <!-- MyLenZ — phone mockup showcase -->
+      <div class="case case-narrow c-mylenz rv d1" style="cursor:default">
         <div class="case-visual">
-          <svg class="case-shape" viewBox="0 0 200 200" fill="none">
-            <polygon points="100,15 175,57 175,143 100,185 25,143 25,57" stroke="#a78bfa" stroke-width="1.5" fill="none"/>
-            <polygon points="100,50 145,75 145,125 100,150 55,125 55,75" stroke="#a78bfa" stroke-width="1" fill="rgba(167,139,250,0.12)"/>
-            <circle cx="100" cy="100" r="18" fill="#a78bfa" opacity=".7"/>
-            <circle cx="100" cy="100" r="6" fill="#fff"/>
-          </svg>
+          <!-- Phone 1: Morning Wrap (back) -->
+          <div class="phone phone-back">
+            <div class="ph-nav">
+              <span class="ph-logo">Len<span class="gz">Z</span></span>
+              <span class="ph-joinbtn">Join LenZ</span>
+            </div>
+            <div class="ph-card">
+              <div class="ph-card-hdr">
+                <span>Next Wrap</span>
+                <span class="ph-live">Live</span>
+              </div>
+              <div class="ph-card-title">Morning Wrap</div>
+              <div class="ph-card-sub">Unlocks tomorrow morning · everyone together</div>
+              <div class="ph-countdown">
+                <div class="ph-unit"><span class="ph-uval">08</span><span class="ph-ulbl">Hours</span></div>
+                <div class="ph-unit"><span class="ph-uval">42</span><span class="ph-ulbl">Mins</span></div>
+                <div class="ph-unit"><span class="ph-uval">41</span><span class="ph-ulbl">Secs</span></div>
+              </div>
+              <div class="ph-footer">
+                <span><b>149</b> posts waiting</span>
+                <div class="ph-avs">
+                  <span class="ph-av" style="background:#7c3aed"></span>
+                  <span class="ph-av" style="background:#ea580c"></span>
+                  <span class="ph-av" style="background:#0d9488"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Phone 2: Landing hero (front) -->
+          <div class="phone phone-front">
+            <div class="ph-nav">
+              <span class="ph-logo">Len<span class="gz">Z</span></span>
+              <span class="ph-joinbtn">Join LenZ</span>
+            </div>
+            <div class="ph-hero">
+              <div class="ph-htag">A new rhythm for social</div>
+              <h3 class="ph-htitle">Post in the moment.<br>Share on <em>cue.</em></h3>
+              <p class="ph-hdesc">Two shared moments a day — Morning Wrap &amp; Evening Wrap — when everyone's posts unlock together.</p>
+              <span class="ph-hcta">Create your account →</span>
+              <span class="ph-hcta2">See how it works</span>
+              <div class="ph-hstats">
+                <div class="ph-hstat"><span class="ph-hsnum">2</span><span class="ph-hslbl">Daily moments</span></div>
+                <div class="ph-hstat"><span class="ph-hsnum">4</span><span class="ph-hslbl">Lenses to share</span></div>
+                <div class="ph-hstat"><span class="ph-hsnum">0</span><span class="ph-hslbl">Infinite scrolls</span></div>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="case-label"><span>02 / Social App</span><span>2025</span></div>
         <div class="case-meta">
@@ -447,30 +544,38 @@
             <h3 class="case-name">MyLenZ.app</h3>
             <div class="case-tag">Landing Page Design &amp; Build</div>
           </div>
-          <div class="case-arrow" style="background:#a78bfa;color:#0c0c14"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg></div>
+          <a href="https://www.mylenz.app" target="_blank" rel="noopener" class="case-arrow" style="background:#a78bfa;color:#0c0c14">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg>
+          </a>
         </div>
-      </a>
+      </div>
 
-      <!-- ITG Africa — narrow left -->
-      <a class="case case-narrow c-itg rv" href="https://www.youtube.com/channel/UCTXtkaIBPfb58dmi4pXLqig" target="_blank" rel="noopener">
-        <div class="case-visual">
-          <svg class="case-shape" viewBox="0 0 200 200" fill="none">
-            <path d="M20 120 Q60 40 100 80 Q140 120 180 40" stroke="#F5C518" stroke-width="1.5" fill="none"/>
-            <path d="M20 140 Q60 60 100 100 Q140 140 180 60" stroke="#F5C518" stroke-width="1" opacity=".5" fill="none"/>
-            <path d="M20 160 Q60 80 100 120 Q140 160 180 80" stroke="#F5C518" stroke-width=".6" opacity=".3" fill="none"/>
-            <circle cx="100" cy="100" r="22" fill="none" stroke="#F5C518" stroke-width="1"/>
-            <path d="M91 92 L116 100 L91 108 Z" fill="#F5C518"/>
-          </svg>
-        </div>
-        <div class="case-label"><span>03 / Brand &amp; Audio</span><span>2025</span></div>
-        <div class="case-meta">
-          <div>
-            <h3 class="case-name">ITG Africa</h3>
-            <div class="case-tag">Voiceover Production · Brand Sound</div>
+      <!-- ITG Africa — full-width YouTube video -->
+      <div class="case-video rv">
+        <div class="yt-area">
+          <div class="yt-facade" id="itgFacade" onclick="loadITGvideo()">
+            <img class="yt-thumb" src="https://img.youtube.com/vi/y29ImrGBGhs/maxresdefault.jpg" alt="ITG Africa — Africa Told In A New Light" onerror="this.src='https://img.youtube.com/vi/y29ImrGBGhs/hqdefault.jpg'">
+            <div class="yt-play">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+            <div class="yt-badge">
+              <svg width="20" height="14" viewBox="0 0 20 14"><rect width="20" height="14" rx="3" fill="#FF0000"/><polygon points="8,3 15,7 8,11" fill="white"/></svg>
+              Watch on YouTube
+            </div>
           </div>
-          <div class="case-arrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg></div>
+          <div class="yt-frame-wrap" id="itgFrame"></div>
         </div>
-      </a>
+        <div class="video-meta">
+          <div>
+            <div class="video-label">03 / Brand &amp; Audio · 2025</div>
+            <h3 class="video-name">ITG Africa</h3>
+            <p class="video-tag">Voiceover Production · Brand Sound</p>
+          </div>
+          <a href="https://www.youtube.com/channel/UCTXtkaIBPfb58dmi4pXLqig" target="_blank" rel="noopener" class="video-arrow">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg>
+          </a>
+        </div>
+      </div>
 
     </div>
   </div>
@@ -652,6 +757,14 @@
 </div>
 
 <script>
+/* ITG YOUTUBE */
+function loadITGvideo(){
+  document.getElementById('itgFacade').style.display='none';
+  const f=document.getElementById('itgFrame');
+  f.style.display='block';
+  f.innerHTML='<iframe src="https://www.youtube.com/embed/y29ImrGBGhs?autoplay=1&rel=0&modestbranding=1" allow="autoplay;encrypted-media;picture-in-picture;fullscreen" allowfullscreen></iframe>';
+}
+
 /* LOADER */
 const loader=document.getElementById('loader'),lpct=document.getElementById('lpct');
 let pct=0;

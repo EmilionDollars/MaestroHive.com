@@ -1,0 +1,37 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:www.youtube.com)",
+      "WebFetch(domain:www.mylenz.app)",
+      "WebFetch(domain:consent.youtube.com)",
+      "WebSearch",
+      "WebFetch(domain:mylenz.app)",
+      "Bash(curl -s -A \"Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/120.0.0.0 Safari/537.36\" \"https://www.mylenz.app\")",
+      "Bash(curl -s -A \"Mozilla/5.0\" \"https://www.mylenz.app\")",
+      "Bash(curl -s \"https://www.youtube.com/feeds/videos.xml?channel_id=UCTXtkaIBPfb58dmi4pXLqig\")",
+      "Bash(curl -s -A \"Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/120.0.0.0 Safari/537.36\" \"https://www.mylenz.app/_next/static/chunks/app/page-7144ae78b107d6a0.js\")",
+      "Bash(curl -s -A \"Mozilla/5.0\" \"https://www.mylenz.app/_next/static/chunks/app/page-7144ae78b107d6a0.js\")",
+      "Bash(grep -oE '\"[^\"]{5,100}\\\\.\\(jpg|png|webp|avif\\)\"')",
+      "Bash(curl -s -A \"Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36\" \"https://www.mylenz.app/_next/static/chunks/app/page-7144ae78b107d6a0.js\")",
+      "Bash(curl -s -A \"Mozilla/5.0\" \"https://www.mylenz.app/_next/static/css/897f866223a79c44.css\")",
+      "Bash(curl -s -A \"Mozilla/5.0\" \"https://www.mylenz.app/_next/static/css/5373a87a561cda8b.css\")",
+      "Bash(curl -s -A \"Mozilla/5.0 \\(iPhone; CPU iPhone OS 17_0 like Mac OS X\\) AppleWebKit/605.1.15 \\(KHTML, like Gecko\\) Version/17.0 Mobile/15E148 Safari/604.1\" \"https://www.mylenz.app\")",
+      "Bash(curl -s -A \"Mozilla/5.0\" \"https://www.mylenz.app/manifest.json\")",
+      "Bash(curl -s -A \"Mozilla/5.0\" \"https://www.mylenz.app/browserconfig.xml\")",
+      "Bash(curl -s -o /dev/null -w '%{http_code}' -A Mozilla/5.0 https://www.mylenz.app__TRACKED_VAR__)",
+      "Bash(curl -s -o /dev/null -w '%{http_code}' -A Mozilla/5.0 https://www.mylenz.app/__TRACKED_VAR__)",
+      "Bash(curl -s -A \"Mozilla/5.0\" \"https://www.mylenz.app/icons/icon-192.png\" -o /dev/null -w \"icon-192.png: HTTP %{http_code}\\\\n\")",
+      "Bash(curl -s -A \"Mozilla/5.0\" \"https://www.mylenz.app/icons/icon-512.png\" -o /dev/null -w \"icon-512.png: HTTP %{http_code}\\\\n\")",
+      "Bash(curl -s -A \"Mozilla/5.0\" \"https://www.mylenz.app/icons/apple-touch-icon.png\" -o /dev/null -w \"apple-touch-icon.png: HTTP %{http_code}\\\\n\")",
+      "Bash(grep -oE '\"\\(https?://[^\"]{10,200}\\)\"')",
+      "Bash(node -e ' *)",
+      "Bash(curl -s -A 'Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/120.0.0.0 Safari/537.36' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Accept-Language: en-US,en;q=0.5' https://www.mylenz.app)",
+      "Bash(curl -s -A \"Mozilla/5.0\" \"https://www.mylenz.app/_next/static/chunks/2619-3c9e02e22d10480a.js\")",
+      "Bash(grep -oE '\"https?://[^\"]{5,200}\"')",
+      "Bash(curl -s \"https://www.mylenz.app/sitemap.xml\")",
+      "Bash(curl -s \"https://www.mylenz.app/robots.txt\")",
+      "Bash(curl -s -A 'Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/120.0.0.0 Safari/537.36' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8' -H 'Accept-Language: en-US,en;q=0.9' -H 'Accept-Encoding: gzip, deflate, br' -H 'Upgrade-Insecure-Requests: 1' https://www.mylenz.app)",
+      "Bash(curl -s --compressed -A 'Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/120.0.0.0 Safari/537.36' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Accept-Language: en-US,en;q=0.9' https://www.mylenz.app)"
+    ]
+  }
+}
