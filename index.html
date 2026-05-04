@@ -159,7 +159,9 @@
 .case-shape{width:60%;height:60%;opacity:.5;transition:transform 1s cubic-bezier(.2,.9,.2,1)}
 .case:hover .case-shape{transform:scale(1.15) rotate(12deg)}
 
-.c-brands .case-visual{background:radial-gradient(ellipse at 30% 40%,#1A2D7A 0%,#07102E 70%)}
+.c-brands .case-visual{background:#07102E}
+.case-video-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.case-video-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(7,16,46,.8) 0%,rgba(7,16,46,.15) 60%,transparent 100%);z-index:1}
 .c-mylenz .case-visual{background:linear-gradient(135deg,#0c0c14 0%,#1a103a 100%)}
 .c-itg .case-visual{background:linear-gradient(135deg,#0B1A47 0%,#122260 100%)}
 
@@ -483,12 +485,10 @@
       <!-- BrandsandIdeas — wide left -->
       <a class="case case-wide c-brands rv" href="https://www.instagram.com/maestrohive?igsh=MW53YWZua3Nxb2R1Yw%3D%3D&utm_source=qr" target="_blank" rel="noopener">
         <div class="case-visual">
-          <svg class="case-shape" viewBox="0 0 200 200" fill="none" stroke="#F5C518" stroke-width="1">
-            <circle cx="100" cy="100" r="90"/>
-            <circle cx="100" cy="100" r="65"/>
-            <circle cx="100" cy="100" r="40"/>
-            <path d="M10 100L190 100M100 10L100 190M26 44L174 156M174 44L26 156"/>
-          </svg>
+          <video class="case-video-bg" autoplay muted loop playsinline preload="metadata">
+            <source src="bandi-brand-video.mp4" type="video/mp4">
+          </video>
+          <div class="case-video-overlay"></div>
         </div>
         <div class="case-label"><span>01 / Media &amp; Advertising</span><span>2025</span></div>
         <div class="case-meta">
