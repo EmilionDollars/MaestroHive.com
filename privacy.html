@@ -206,7 +206,7 @@
 <footer class="footer">
   <div class="container">
     <div class="footer-bottom">
-      <div>© 2023 MaestroHive. All rights reserved.</div>
+      <div>© <span class="copy-yr">2026</span> MaestroHive. All rights reserved.</div>
       <div style="display:flex;gap:24px;flex-wrap:wrap">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
@@ -215,6 +215,6 @@
     </div>
   </div>
 </footer>
-
+<script>document.querySelectorAll('.copy-yr').forEach(el=>el.textContent=new Date().getFullYear());</script>
 </body>
 </html>

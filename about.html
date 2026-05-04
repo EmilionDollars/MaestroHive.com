@@ -374,7 +374,7 @@ section{padding:clamp(80px,10vw,140px) 0}
 <footer class="footer">
   <div class="container">
     <div class="footer-bottom">
-      <div>© 2023 MaestroHive. All rights reserved.</div>
+      <div>© <span class="copy-yr">2026</span> MaestroHive. All rights reserved.</div>
       <div style="display:flex;gap:24px;flex-wrap:wrap">
         <a href="index.html">Home</a>
         <a href="privacy.html">Privacy Policy</a>
@@ -483,6 +483,7 @@ section{padding:clamp(80px,10vw,140px) 0}
 </div>
 
 <script>
+document.querySelectorAll('.copy-yr').forEach(el=>el.textContent=new Date().getFullYear());
 /* REVEAL */
 const rvEls=document.querySelectorAll('.rv');
 const robs=new IntersectionObserver(entries=>{
